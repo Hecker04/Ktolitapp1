@@ -9,10 +9,11 @@ import com.example.eror.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var tvCounter: TextView
+    //pake biding jadi nggk perlu lagi mendeklarasi lagi
+   /* private lateinit var tvCounter: TextView
     private lateinit var btnAddNumber: Button
     private lateinit var btnKurangnumber: Button
-    private lateinit var btnDeletenumber: Button
+    private lateinit var btnDeletenumber: Button*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.tvCounter.text = "1"
 
-        tvCounter = findViewById(R.id.tvCounter)
+        /* tvCounter = findViewById(R.id.tvCounter)
         btnAddNumber = findViewById(R.id.btnAddNumber)
         btnKurangnumber = findViewById(R.id.btnKurangnumber) // Bind tombol untuk mengurangi
         btnDeletenumber = findViewById(R.id.btnDeletenumber)
@@ -41,24 +42,24 @@ class MainActivity : AppCompatActivity() {
         btnDeletenumber.setOnClickListener {
             DeleteNumber()
         }
-    }
-    private fun addNumber() {
-        val currVal = binding.tvCounter.text.toString().toInt()
-        val nextVal = currVal + 1
-        tvCounter.text = nextVal.toString()
-    }
+    }*/
+        fun addNumber() {
+            val currVal = binding.tvCounter.text.toString().toInt()
+            val nextVal = currVal + 1
+            binding.tvCounter.text = nextVal.toString()
+        }
 
-// Fungsi untuk mengurangi angka
-private fun kurangNumber() {
-    val currVal = binding.tvCounter.text.toString().toInt()
-    if (currVal > 0) { // Pastikan angka tidak menjadi negatif
-        val nextVal = currVal - 1
-        tvCounter.text = nextVal.toString()
-    }
-}
+        // Fungsi untuk mengurangi angka
+        fun kurangNumber() {
+            val currVal = binding.tvCounter.text.toString().toInt()
+            if (currVal > 0) { // Pastikan angka tidak menjadi negatif
+                val nextVal = currVal - 1
+                binding.tvCounter.text = nextVal.toString()
+            }
+        }
 
-// Fungsi untuk mereset angka menjadi 0
-private fun DeleteNumber() {
-    binding.tvCounter.text = "0"
-}
-}
+        // Fungsi untuk mereset angka menjadi 0
+        fun DeleteNumber() {
+            binding.tvCounter.text = "0"
+        }
+    }}
