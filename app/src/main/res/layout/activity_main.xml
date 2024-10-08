@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="@string/number"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="374sp"
         android:textStyle="bold" />
     <Button
         android:id="@+id/btnAddNumber"
