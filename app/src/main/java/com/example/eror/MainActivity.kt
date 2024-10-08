@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvCounter: TextView
     private lateinit var btnAddNumber: Button
     private lateinit var btnKurangnumber: Button
-    private lateinit var btnDelatenumber: Button
+    private lateinit var btnDeletenumber: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,11 +24,11 @@ class MainActivity : AppCompatActivity() {
         tvCounter = findViewById(R.id.tvCounter)
         btnAddNumber = findViewById(R.id.btnAddNumber)
         btnKurangnumber = findViewById(R.id.btnKurangnumber) // Bind tombol untuk mengurangi
-        btnDelatenumber = findViewById(R.id.btnDelatenumber)
+        btnDeletenumber = findViewById(R.id.btnDeletenumber)
 
         tvCounter.text = "1"
 
-        // Setting up the onClickListener for the button
+        // Setting up the onClickListener for the buttonn
         btnAddNumber.setOnClickListener {
             addNumber()
         }
@@ -38,8 +38,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Listener untuk mereset angka ke 0
-        btnDelatenumber.setOnClickListener {
-            resetNumber()
+        btnDeletenumber.setOnClickListener {
+            DeleteNumber()
         }
     }
     private fun addNumber() {
@@ -58,7 +58,7 @@ private fun kurangNumber() {
 }
 
 // Fungsi untuk mereset angka menjadi 0
-private fun resetNumber() {
+private fun DeleteNumber() {
     binding.tvCounter.text = "0"
 }
 }

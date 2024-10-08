@@ -29,10 +29,10 @@
         android:text="@string/kurang_number"
         android:onClick="kurangi"/>
     <Button
-        android:id="@+id/btnDelatenumber"
+        android:id="@+id/btnDeletenumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/delate_number"
-        android:onClick="gelatenumber"/>
+        android:text="@string/delete_number"
+        android:onClick="deletenumber"/>
 </LinearLayout>
